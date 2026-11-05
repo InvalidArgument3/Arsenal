@@ -13,7 +13,7 @@ architectury {
 }
 
 tasks.register('clean-builds') {
-    dependsOn(':arsenal-forge:clean',':arsenal-fabric:clean')
+    dependsOn(':arsenal-forge:clean', ':arsenal-fabric:clean')
     doLast {
         println "Cleaned previous build"
     }
@@ -108,7 +108,7 @@ subprojects {
                 "github"                        : rootProject.github
         ]
 
-        filesMatching(['pack.mcmeta', 'fabric.mod.json','META-INF/neoforge.mods.toml', 'META-INF/mods.toml', '*.mixins.json']) {
+        filesMatching(['pack.mcmeta', 'fabric.mod.json', 'META-INF/neoforge.mods.toml', 'META-INF/mods.toml', '*.mixins.json']) {
             expand expandProps
         }
     }
